@@ -43,6 +43,7 @@ Now only capturing PID 181:
 # perf record -F 99 -p 181 -g -- sleep 60
 # perf script > out.perf
 ```
+Note: different systems have different default cycles event characteristics (e.g., cycles in or out of halt).  Try adding `-e cpu-clock` to the record sub-commands above as a work around for this discrepancy.
 
 ### DTrace
 
